@@ -1,0 +1,8 @@
+# can_ids should always be downloaded
+src/can_ids.h
+bin
+obj
+
+
+compile_commands.json
+src/adc.c.dump src/can_app.c.dump src/control.c.dump src/machine.c.dump src/main.c.dump src/usart.c.dump

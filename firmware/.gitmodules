@@ -1,0 +1,3 @@
+[submodule "CAN_IDS19"]
+	path = CAN_IDS19
+	url = https://github.com/ZeniteSolar/CAN_IDS19.git
