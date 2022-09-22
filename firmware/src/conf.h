@@ -20,7 +20,7 @@
 #define VERBOSE_ON
 #define VERBOSE_ON_CAN_APP
 #define VERBOSE_ON_MACHINE
-//#define VERBOSE_ON_ADC
+#define VERBOSE_ON_ADC
 #define VERBOSE_ON_INIT
 #define VERBOSE_ON_ERROR
 #define VERBOSE_ON_RELAY
@@ -95,6 +95,7 @@
 #define     clr_chargerelay()       clr_bit(CHARGERELAY_PORT, CHARGERELAY)
 */
 
+#define SET_LED(port, pin, x) x ? set_bit(port, pin) : clr_bit(port, pin)
 
 #define     MOTOR_ON_OK_PORT        PORTC
 #define     MOTOR_ON_OK_PIN         PINC
@@ -118,14 +119,20 @@
 #define     CTRL_SWITCHES_PORT      PORTD
 #define     CTRL_SWITCHES_PIN       PIND
 #define     CTRL_SWITCHES_DDR       DDRD
-#define     BOAT_ON_OK   	    PD7
+#define     BOAT_ON_OK   	        PD7
 #define     BOAT_ON_SWITCH          PD5
 #define     MOTOR_ON_SWITCH         PD3
 #define     MCC_ON_SWITCH           PD2
 
-#define 	MOTOR_PWM_POT			ADC0
-#define  	MOTOR_RAMP_POT			ADC1
-#define 	MCC_POWER_POT			ADC2
+//Velocity
+#define     POT_ZERO_PORT     PORTC
+#define     POT_ZERO_PIN       PINC
+#define     POT_ZERO_DDR       DDRC
+#define 	POT_ZERO			PC0
+//Acel
+#define  	MOTOR_RAMP_POT			PC1
+//Mcc
+#define 	MCC_POWER_POT			PC2
 
 #ifdef LED_ON
 #define     LED_PORT                PORTD

@@ -118,23 +118,17 @@ EXAMPLE OF PIN INIT
 
     VERBOSE_MSG_INIT(usart_send_string("IOs... "));
     set_bit(MOTOR_ON_OK_PORT, MOTOR_ON_OK);     //Como saida
-    set_bit(MOTOR_ON_OK_DDR, MOTOR_ON_OK);    //Ativa o pull-up
     set_bit(MCBS_OK_DDR, MCBS_OK);    //Como saida
-    set_bit(MCBS_OK_PORT,MCBS_OK);    //Ativa o pull-up        
     set_bit(REVERSE_SWITCH_DDR, REVERSE_SWITCH);      //Como saida
-    set_bit(REVERSE_SWITCH_PORT, REVERSE_SWITCH);     //Ativa o pull-up
 
     set_bit(DMS_DDR, DMS);      //Como saida
-    set_bit(DMS_PORT, DMS);     //Ativa o pull-up    
 
     set_bit(CTRL_SWITCHES_DDR, BOAT_ON_OK);      //Como saida
-    set_bit(CTRL_SWITCHES_PORT, BOAT_ON_OK);     //Ativa o pull-up
     set_bit(CTRL_SWITCHES_DDR, BOAT_ON_SWITCH);      //Como saida
-    set_bit(CTRL_SWITCHES_PORT, BOAT_ON_SWITCH);     //Ativa o pull-up
     set_bit(CTRL_SWITCHES_DDR, MOTOR_ON_SWITCH);      //Como saida
-    set_bit(CTRL_SWITCHES_PORT, MOTOR_ON_SWITCH);     //Ativa o pull-up
     set_bit(CTRL_SWITCHES_DDR, MCC_ON_SWITCH);      //Como saida
-    set_bit(CTRL_SWITCHES_PORT, MCC_ON_SWITCH);     //Ativa o pull-up
+
+    set_bit(POT_ZERO_DDR, POT_ZERO); // COmo saida
 
     VERBOSE_MSG_INIT(usart_send_string("OK!\n"));
 

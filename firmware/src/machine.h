@@ -87,19 +87,6 @@ typedef union error_flags
     uint8_t all;
 } error_flags_t;
 
-typedef struct
-{
-    uint32_t sum;
-    uint16_t avg;
-    uint32_t samples;
-} sub_control_t;
-
-typedef struct control
-{
-    sub_control_t motor_PWM_target;
-    sub_control_t motor_RAMP_target;
-    sub_control_t MCC_POWER_target;
-} control_t;
 
 // machine checks
 void check_buffers(void);
@@ -143,7 +130,6 @@ void buzzer(uint8_t buzzer_frequency, uint8_t buzzer_rhythm_on, uint8_t buzzer_r
 
 // machine variables
 extern volatile state_machine_t state_machine;
-extern volatile control_t control;
 extern volatile pump_flags_t pump_flags;
 extern volatile system_flags_t system_flags;
 extern volatile error_flags_t error_flags;
